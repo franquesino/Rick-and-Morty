@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, CHARACTER_DETAIL, CLEAN_DETAIL } from "./action-Types"
+import { GET_CHARACTERS, CHARACTER_DETAIL, CLEAN_DETAIL, CLEAN_CHARACTERS } from "./action-Types" // agrega CLEAN_CHARACTERS por class component
 const initialState = {
     characters: [],
     characterDetail: {}
@@ -19,7 +19,13 @@ const reducer = (state= initialState, action) => {
             return{
                 ...state,
                 characterDetail : {}
-            }        
+            }
+            //se agrega case CLEAN_CHARACTERS con class component
+        case CLEAN_CHARACTERS:
+            return{
+                ...state,
+                characters: []
+            }    
         default:
             return {...state}
     }

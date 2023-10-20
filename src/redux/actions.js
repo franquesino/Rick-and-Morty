@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, CHARACTER_DETAIL, CLEAN_DETAIL} from "./action-Types"
+import { GET_CHARACTERS, CHARACTER_DETAIL, CLEAN_DETAIL, CLEAN_CHARACTERS} from "./action-Types" //se agrega CLEAN_CHARACTERS por class component
 import axios from "axios"
 
 export const getCharacters = () => {
@@ -19,4 +19,9 @@ export const getcharacterDetail = (id) => {
 
 export const cleanDetail = () => {
     return { type: CLEAN_DETAIL }
+}
+
+//agregamos esto con class component
+export const cleanCharacters = () => {
+    return { type: CLEAN_CHARACTERS }
 }
